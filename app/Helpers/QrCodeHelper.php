@@ -2,10 +2,10 @@
 
 namespace App\Helpers;
 
-use Endroid\QrCode\Color\Color;
-use Endroid\QrCode\Encoding\Encoding;
 use Endroid\QrCode\QrCode;
 use Endroid\QrCode\Writer\PngWriter;
+use Illuminate\Http\File;
+use Illuminate\Http\UploadedFile;
 use Illuminate\Support\Facades\Storage;
 use Nette\Utils\Random;
 
@@ -18,9 +18,9 @@ class QrCodeHelper
         $writer = new PngWriter();
         $qrCode = new QrCode($link);
         $result = $writer->write($qrCode);
-        header('Content-Type: '.$result->getMimeType());
+        // header('Content-Type: '.$result->getMimeType());
         $path .= '/'.Random::generate().'.png';
-        Storage::disk('public')->put($path, $result->getString());
+        Storage::disk('public')->putFile($path, $result->getString());
         return url($path);
     }
 }
