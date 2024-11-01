@@ -37,7 +37,7 @@ class JabatanController extends Controller
 
         $request->validate([
             'jabatan' => 'required',
-            'nip' => 'required|integer'
+            'nip' => 'required|string'
         ]);
 
         $jabatan = Jabatan::findOrFail($id);
