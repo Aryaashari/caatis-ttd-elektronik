@@ -77,7 +77,7 @@ class SuratController extends Controller
                 SuratPengguna::create([
                     'id' => $idSuratPengguna,
                     'surat_id' => $surat->id,
-                    'jabatan_id' => $jabatan->id,
+                    'jabatan_id' => $jabatan,
                     'qrcode_file' => $pathQr,
                 ]);
             }
