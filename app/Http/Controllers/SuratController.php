@@ -326,17 +326,20 @@ class SuratController extends Controller
         return redirect()->back()->withErrors(['surat' => "Dokumen sudah ditandatangan!"]);
     }
 
-
     public function destroy(Surat $surat)
     {
-        // must be file_edited null
-        if ($surat->file_edited == null) {
-
+        DB::beginTransaction();
+        try {
+            SuratPengguna::where('surat_id', $surat->id)->delete();
+            Storage::disk('public')->deleteDirectory('/uploads/surat/'.$surat->id);
             $surat->delete();
+            DB::commit();
             return redirect()->back();
+        } catch (Exception $error) {
+            DB::rollBack();
+            return $error;
         }
-
-        return redirect()->back()->withErrors(['surat' => "Dokumen sudah ditandatangan!"]);
+        
     }
 
     public function verifyQr($id)
