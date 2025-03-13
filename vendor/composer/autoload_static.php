@@ -613,6 +613,7 @@ class ComposerStaticInitc2ee5c929d110388944a8ede5ac40f5f
 
     public static $classMap = array (
         'App\\Helpers\\QrCodeHelper' => __DIR__ . '/../..' . '/app/Helpers/QrCodeHelper.php',
+        'App\\Http\\Controllers\\ApprovalController' => __DIR__ . '/../..' . '/app/Http/Controllers/ApprovalController.php',
         'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
         'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
         'App\\Http\\Controllers\\Auth\\EmailVerificationNotificationController' => __DIR__ . '/../..' . '/app/Http/Controllers/Auth/EmailVerificationNotificationController.php',
@@ -634,9 +635,11 @@ class ComposerStaticInitc2ee5c929d110388944a8ede5ac40f5f
         'App\\Models\\Jabatan' => __DIR__ . '/../..' . '/app/Models/Jabatan.php',
         'App\\Models\\Kategori' => __DIR__ . '/../..' . '/app/Models/Kategori.php',
         'App\\Models\\Surat' => __DIR__ . '/../..' . '/app/Models/Surat.php',
+        'App\\Models\\SuratApproval' => __DIR__ . '/../..' . '/app/Models/SuratApproval.php',
         'App\\Models\\SuratPengguna' => __DIR__ . '/../..' . '/app/Models/SuratPengguna.php',
         'App\\Models\\User' => __DIR__ . '/../..' . '/app/Models/User.php',
         'App\\Providers\\AppServiceProvider' => __DIR__ . '/../..' . '/app/Providers/AppServiceProvider.php',
+        'App\\Services\\UtilityService' => __DIR__ . '/../..' . '/app/Services/UtilityService.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'BaconQrCode\\Common\\BitArray' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Common/BitArray.php',
         'BaconQrCode\\Common\\BitMatrix' => __DIR__ . '/..' . '/bacon/bacon-qr-code/src/Common/BitMatrix.php',

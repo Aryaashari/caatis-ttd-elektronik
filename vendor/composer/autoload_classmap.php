@@ -7,6 +7,7 @@ $baseDir = dirname($vendorDir);
 
 return array(
     'App\\Helpers\\QrCodeHelper' => $baseDir . '/app/Helpers/QrCodeHelper.php',
+    'App\\Http\\Controllers\\ApprovalController' => $baseDir . '/app/Http/Controllers/ApprovalController.php',
     'App\\Http\\Controllers\\Auth\\AuthenticatedSessionController' => $baseDir . '/app/Http/Controllers/Auth/AuthenticatedSessionController.php',
     'App\\Http\\Controllers\\Auth\\ConfirmablePasswordController' => $baseDir . '/app/Http/Controllers/Auth/ConfirmablePasswordController.php',
     'App\\Http\\Controllers\\Auth\\EmailVerificationNotificationController' => $baseDir . '/app/Http/Controllers/Auth/EmailVerificationNotificationController.php',
@@ -28,9 +29,11 @@ return array(
     'App\\Models\\Jabatan' => $baseDir . '/app/Models/Jabatan.php',
     'App\\Models\\Kategori' => $baseDir . '/app/Models/Kategori.php',
     'App\\Models\\Surat' => $baseDir . '/app/Models/Surat.php',
+    'App\\Models\\SuratApproval' => $baseDir . '/app/Models/SuratApproval.php',
     'App\\Models\\SuratPengguna' => $baseDir . '/app/Models/SuratPengguna.php',
     'App\\Models\\User' => $baseDir . '/app/Models/User.php',
     'App\\Providers\\AppServiceProvider' => $baseDir . '/app/Providers/AppServiceProvider.php',
+    'App\\Services\\UtilityService' => $baseDir . '/app/Services/UtilityService.php',
     'Attribute' => $vendorDir . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
     'BaconQrCode\\Common\\BitArray' => $vendorDir . '/bacon/bacon-qr-code/src/Common/BitArray.php',
     'BaconQrCode\\Common\\BitMatrix' => $vendorDir . '/bacon/bacon-qr-code/src/Common/BitMatrix.php',
